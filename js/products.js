@@ -1,27 +1,2 @@
-function renderProducts() {
-  const grid = document.getElementById("productsGrid");
-  const empty = document.getElementById("emptyState");
-  const q = (document.getElementById("searchInput")?.value || "").trim().toLowerCase();
-  const cat = document.getElementById("categoryFilter")?.value || "all";
-
-  const filtered = products.filter(p => {
-    const matchesText = !q || p.name.toLowerCase().includes(q) || (p.description || "").toLowerCase().includes(q);
-    const matchesCat = cat === "all" || p.category === cat;
-    return matchesText && matchesCat;
-  });
-
-  grid.innerHTML = filtered.map(productCard).join("");
-  empty.classList.toggle("hidden", filtered.length !== 0);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filter = document.getElementById("categoryFilter");
-  filter.innerHTML = `<option value="all">كل الأقسام</option>` + categories.map(c => `<option value="${c.id}">${c.name}</option>`).join("");
-
-  const params = new URLSearchParams(location.search);
-  if (params.get("category")) filter.value = params.get("category");
-
-  document.getElementById("searchInput").addEventListener("input", renderProducts);
-  filter.addEventListener("change", renderProducts);
-  renderProducts();
-});
+function renderProducts(){let g=document.getElementById("productsGrid"),q=(document.getElementById("searchInput").value||"").trim().toLowerCase(),cat=document.getElementById("categoryFilter").value;let a=products.filter(p=>(!q||p.name.toLowerCase().includes(q)||(p.description||"").toLowerCase().includes(q))&&(cat==="all"||p.category===cat));g.innerHTML=a.map(card).join("");document.getElementById("emptyState").classList.toggle("hidden",a.length>0)}
+document.addEventListener("DOMContentLoaded",()=>{let f=document.getElementById("categoryFilter");f.innerHTML='<option value="all">كل الأقسام</option>'+categories.map(c=>`<option value="${c.id}">${c.name}</option>`).join("");let u=new URLSearchParams(location.search);if(u.get("category"))f.value=u.get("category");if(u.get("q"))document.getElementById("searchInput").value=u.get("q");document.getElementById("searchInput").oninput=renderProducts;f.onchange=renderProducts;renderProducts()});
