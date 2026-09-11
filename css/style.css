@@ -345,3 +345,56 @@ body:has(#cartLayout) .site-footer{
   .brand-mark{width:55px;height:55px}
   .brand-mark span{width:36px;height:36px;font-size:20px}
 }
+
+/* ===== v5.3: compact header logo + universal menu ===== */
+.brand{padding:0!important;top:4px!important}
+.brand strong{display:block;line-height:1}
+.brand i{display:block;line-height:7px;font-size:12px;margin-top:1px}
+.header-logo{
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  margin:2px auto 0;
+  border-radius:50%;
+  background:#34474d;
+  border:2px solid #76c9c2;
+  color:#fff;
+  font-size:15px;
+  font-weight:900;
+  box-shadow:0 2px 7px rgba(20,40,45,.16);
+}
+#mainNav{position:relative;z-index:100}
+#mainNav.open{display:block!important}
+@media(max-width:900px){
+  #mainNav.open .nav-inner{
+    position:absolute;
+    top:5px;
+    right:15px;
+    width:min(200px,calc(100vw - 30px));
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:13px;
+    box-shadow:0 14px 35px rgba(15,35,40,.16);
+    padding:7px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    z-index:120;
+  }
+  #mainNav.open .nav-inner a{
+    display:block;
+    padding:10px 12px;
+    border:0;
+    border-radius:8px;
+    font-size:11px;
+  }
+  #mainNav.open .nav-inner a.active,
+  #mainNav.open .nav-inner a:hover{background:#eef8f7;color:var(--green)}
+}
+@media(max-width:600px){
+  .header-row{height:72px}
+  .brand{top:4px!important}
+  .brand strong{font-size:20px}
+  .header-logo{width:28px;height:28px;font-size:15px}
+}
