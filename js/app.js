@@ -22,34 +22,45 @@ let fg=document.getElementById("featuredGrid");if(fg)fg.innerHTML=products.filte
 let s=document.getElementById("homeSearch");if(s)s.addEventListener("keydown",e=>{if(e.key==="Enter")goSearch()})});
 
 
-/* ===== Universal menu: v5.5 ===== */
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("mobileMenuBtn");
-  const nav = document.getElementById("mainNav");
-  if (!btn || !nav) return;
 
-  function closeMenu() {
-    nav.classList.remove("open");
-    btn.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
-    nav.setAttribute("aria-hidden", "true");
+/* ===== Universal menu: v5.6 ===== */
+(function(){
+  function initHanbolaMenu(){
+    const btn=document.getElementById("mobileMenuBtn");
+    const nav=document.getElementById("mainNav");
+    if(!btn||!nav||btn.dataset.menuReady==="1") return;
+    btn.dataset.menuReady="1";
+
+    const setOpen=(open)=>{
+      nav.classList.toggle("open",open);
+      btn.classList.toggle("is-open",open);
+      btn.setAttribute("aria-expanded",open?"true":"false");
+      nav.setAttribute("aria-hidden",open?"false":"true");
+    };
+
+    btn.addEventListener("click",function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(!nav.classList.contains("open"));
+    },true);
+
+    nav.addEventListener("click",function(e){
+      const link=e.target.closest("a");
+      if(link) setOpen(false);
+    });
+
+    document.addEventListener("click",function(e){
+      if(!nav.contains(e.target)&&!btn.contains(e.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown",function(e){
+      if(e.key==="Escape") setOpen(false);
+    });
   }
 
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const open = !nav.classList.contains("open");
-    nav.classList.toggle("open", open);
-    btn.classList.toggle("is-open", open);
-    btn.setAttribute("aria-expanded", String(open));
-    nav.setAttribute("aria-hidden", String(!open));
-  });
-
-  nav.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("click", function (e) {
-    if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
-  });
-});
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",initHanbolaMenu,{once:true});
+  }else{
+    initHanbolaMenu();
+  }
+})();

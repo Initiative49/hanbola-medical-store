@@ -480,3 +480,36 @@ body:has(#cartLayout) .site-footer{
 .header-logo{
   transform:translateY(4px);
 }
+
+/* ===== v5.6 final requested refinements ===== */
+.header-logo{
+  transform:translateY(7px);
+  overflow:hidden;
+  position:relative;
+}
+.header-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  position:absolute;
+  inset:0;
+}
+.header-logo b{
+  position:relative;
+  z-index:1;
+  color:#fff;
+}
+.header-logo:has(img[style*="display: none"]) b{display:grid;place-items:center;width:100%;height:100%}
+
+/* White, clean footer icons */
+.footer-benefit .benefit-icon,
+.social-links a span{
+  color:#fff!important;
+}
+.footer-benefit .benefit-icon{
+  background:rgba(255,255,255,.10)!important;
+}
+.social-links a span{
+  background:rgba(255,255,255,.10)!important;
+}
