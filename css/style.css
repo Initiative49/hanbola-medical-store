@@ -570,3 +570,24 @@ body:has(#cartLayout) .site-footer{
   fill:#fff;
   stroke:none;
 }
+
+.header-logo{
+    display:block;
+    width:140px;
+    height:55px;
+    margin:2px auto 0;
+    border-radius:0;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    position:relative;
+}
+
+.header-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    position:absolute;
+    inset:0;
+}
