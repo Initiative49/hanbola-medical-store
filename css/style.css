@@ -233,3 +233,115 @@ nav{background:#fff}
     font-size:8px;
   }
 }
+
+/* ===== v5.2 final refinements ===== */
+
+/* Header branding */
+.brand{padding:0!important}
+.brand small,.brand-logo{display:none!important}
+
+/* Standalone logo between the store name and the banner */
+.brand-mark-wrap{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+}
+.brand-mark{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#34474d;
+  border:4px solid #e8eeee;
+  box-shadow:0 5px 16px rgba(20,40,45,.12);
+  display:grid;
+  place-items:center;
+}
+.brand-mark span{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:2px solid #76c9c2;
+  color:#fff;
+  font-size:21px;
+  font-weight:900;
+}
+
+/* Professional vertical menu that does not push page content sideways */
+.site-header{overflow:visible}
+#mainNav{
+  position:relative;
+}
+#mainNav.open{
+  display:block;
+}
+#mainNav .nav-inner{
+  position:relative;
+}
+@media(max-width:900px){
+  #mainNav.open .nav-inner{
+    position:absolute;
+    top:0;
+    right:15px;
+    width:min(190px,calc(100vw - 30px));
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:13px;
+    box-shadow:0 14px 35px rgba(15,35,40,.14);
+    padding:7px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    z-index:80;
+  }
+  #mainNav.open .nav-inner a{
+    display:block;
+    padding:9px 11px;
+    border:0;
+    border-radius:8px;
+    font-size:11px;
+  }
+  #mainNav.open .nav-inner a:hover,
+  #mainNav.open .nav-inner a.active{
+    background:#eef8f7;
+    color:var(--green);
+  }
+}
+
+/* Cart pages fill the viewport and keep footer at the bottom */
+body:has(.cart-layout), body:has(#cartLayout){
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+body:has(.cart-layout) .site-header,
+body:has(#cartLayout) .site-header{flex:none}
+body:has(.cart-layout) .page,
+body:has(#cartLayout) .page{
+  flex:1;
+  width:100%;
+  min-height:0;
+}
+body:has(.cart-layout) .site-footer,
+body:has(#cartLayout) .site-footer{
+  margin-top:auto;
+}
+
+/* Cart uses YER only */
+.cart-yar-price{
+  display:block;
+  color:var(--green);
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+/* Better mobile logo spacing */
+@media(max-width:600px){
+  .brand-mark-wrap{height:72px}
+  .brand-mark{width:55px;height:55px}
+  .brand-mark span{width:36px;height:36px;font-size:20px}
+}
