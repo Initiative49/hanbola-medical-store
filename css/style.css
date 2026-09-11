@@ -120,7 +120,7 @@ nav{background:#fff}
   .nav a{font-size:11px}
   .hero{padding-top:8px}
   .hero-banner-wrap{width:calc(100% - 20px)}
-  .hero-slider{height:150px;border-radius:13px}
+  .hero-slider{height:190px;border-radius:13px}
   .steps{padding:18px 0 25px}
   .steps-grid{gap:6px}
   .step-card{padding:10px 4px;min-height:112px}
@@ -353,8 +353,8 @@ body:has(#cartLayout) .site-footer{
 .header-logo{
   display:grid;
   place-items:center;
-  width:28px;
-  height:28px;
+  width:35px;
+  height:35px;
   margin:2px auto 0;
   border-radius:50%;
   background:#34474d;
@@ -396,7 +396,7 @@ body:has(#cartLayout) .site-footer{
   .header-row{height:72px}
   .brand{top:4px!important}
   .brand strong{font-size:20px}
-  .header-logo{width:28px;height:28px;font-size:15px}
+  .header-logo{width:35px;height:35px;font-size:15px}
 }
 
 /* ===== v5.4 requested updates ===== */
