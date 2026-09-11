@@ -136,3 +136,100 @@ nav{background:#fff}
   .hero-slider{height:132px}
   .step-card h3{font-size:9px}
 }
+
+/* ===== Footer refinement: Why Hanbola integrated into footer ===== */
+.site-footer{
+  background:#111c25;
+  color:#d7e1e3;
+  margin-top:0;
+}
+.site-footer .footer-main{
+  padding:30px 0 24px;
+  text-align:center;
+}
+.footer-brand strong{
+  display:block;
+  color:#fff;
+  font-size:30px;
+  line-height:1.1;
+  font-weight:900;
+}
+.footer-brand strong span{color:var(--green)}
+.footer-brand p{
+  margin:8px 0 22px;
+  font-size:11px;
+  color:#b9c7ca;
+}
+.footer-benefits{
+  border-top:1px solid rgba(255,255,255,.10);
+  padding-top:20px;
+}
+.footer-benefits h3{
+  color:#fff;
+  margin:0 0 14px;
+  font-size:16px;
+}
+.footer-benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+  max-width:850px;
+  margin:auto;
+}
+.footer-benefit{
+  min-height:68px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.035);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:4px;
+  font-size:9px;
+}
+.benefit-icon{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(11,117,110,.20);
+  color:#5fc9c0;
+  font-size:13px;
+  font-weight:900;
+}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.footer-bottom-inner{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  font-size:9px;
+  color:#9eafb3;
+  direction:ltr;
+}
+.footer-bottom-inner span:last-child{direction:rtl}
+
+@media(max-width:600px){
+  .site-footer .footer-main{padding:27px 0 20px}
+  .footer-brand strong{font-size:27px}
+  .footer-brand p{font-size:10px;margin:7px 0 18px}
+  .footer-benefits{padding-top:17px}
+  .footer-benefits h3{font-size:15px;margin-bottom:11px}
+  .footer-benefit-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+  .footer-benefit{min-height:62px;font-size:8px}
+  .footer-bottom-inner{
+    min-height:58px;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+    font-size:8px;
+  }
+}
