@@ -353,12 +353,12 @@ body:has(#cartLayout) .site-footer{
 .header-logo{
   display:grid;
   place-items:center;
-  width:35px;
-  height:35px;
+  width:50px;
+  height:50px;
   margin:2px auto 0;
   border-radius:50%;
   background:#34474d;
-  border:2px solid #76c9c2;
+  border:2px solid #fff;
   color:#fff;
   font-size:15px;
   font-weight:900;
@@ -396,7 +396,7 @@ body:has(#cartLayout) .site-footer{
   .header-row{height:72px}
   .brand{top:4px!important}
   .brand strong{font-size:20px}
-  .header-logo{width:35px;height:35px;font-size:15px}
+  .header-logo{width:40px;height:40px;font-size:15px}
 }
 
 /* ===== v5.4 requested updates ===== */
