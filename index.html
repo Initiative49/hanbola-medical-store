@@ -8,32 +8,41 @@
 <body>
 <header class="site-header">
   <div class="container header-row">
-    <button class="menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">☰</button>
+    <button class="menu-btn" id="mobileMenuBtn" type="button" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <a class="brand" href="index.html" aria-label="حنبولة">
       <strong>حنبولة</strong><i>•</i>
       <small>متجر المستلزمات الطبية</small>
-      <span class="brand-logo"><b>✚</b> حنبولة الطبي</span>
+      <span class="brand-logo" aria-label="شعار حنبولة">
+        <b>✚</b><span>حنبولة</span>
+      </span>
     </a>
     <a class="cart" href="cart.html" aria-label="السلة">🛒 <b id="cartCount">0</b></a>
   </div>
-  <nav id="mainNav"><div class="container nav-inner"><a class="active" href="index.html">الرئيسية</a><a href="products.html">كل المنتجات</a><a href="#categories">الأقسام</a></div></nav>
+  <nav id="mainNav">
+    <div class="container nav-inner">
+      <a class="active" href="index.html">الرئيسية</a>
+      <a href="products.html">كل المنتجات</a>
+      <a href="#categories">الأقسام</a>
+      <a href="cart.html">السلة</a>
+    </div>
+  </nav>
 </header>
 
-<section class="hero">
- <div class="container hero-inner">
-  <div class="hero-copy"><span>متجر حنبولة الطبي</span><h1>مستلزماتك الطبية<br><em>بكل سهولة</em></h1>
-  <p>مجموعة مختارة من السماعات الطبية وأجهزة الضغط والإكسسوارات الطبية.</p>
-  <a class="btn" href="products.html">تصفح المنتجات <b>←</b></a></div>
-  <div class="hero-visual">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active"><img src="images/001.jpg" alt="منتجات حنبولة"></div>
-      <div class="slide"><img src="images/002.jpg" alt="منتجات حنبولة"></div>
-      <div class="slide"><img src="images/003.jpg" alt="منتجات حنبولة"></div>
+<section class="hero" aria-label="العروض والإعلانات">
+  <div class="hero-banner-wrap">
+    <div class="hero-slider" id="heroSlider" aria-live="polite">
+      <div class="slide active"><img src="images/001.jpg" alt="عرض حنبولة 1"></div>
+      <div class="slide"><img src="images/002.jpg" alt="عرض حنبولة 2"></div>
+      <div class="slide"><img src="images/003.jpg" alt="عرض حنبولة 3"></div>
     </div>
-    <div class="slider-arrows"><button id="prevSlide" aria-label="الصورة السابقة">‹</button><button id="nextSlide" aria-label="الصورة التالية">›</button></div>
   </div>
- </div>
- <div class="dots"><i class="on"></i><i></i><i></i></div>
+  <div class="dots" id="heroDots" aria-label="شرائح البانر">
+    <button class="on" aria-label="الشريحة 1"></button>
+    <button aria-label="الشريحة 2"></button>
+    <button aria-label="الشريحة 3"></button>
+  </div>
 </section>
 
 <section class="section" id="categories"><div class="container">
@@ -46,11 +55,24 @@
  <div id="featuredGrid" class="product-grid"></div>
 </div></section>
 
-<section class="steps"><div class="container steps-grid">
- <div><b>01</b><h3>اختر المنتج</h3><p>أضف المنتجات التي تحتاجها للسلة.</p></div>
- <div><b>02</b><h3>راجع طلبك</h3><p>حدد الكمية وأدخل بيانات التوصيل.</p></div>
- <div><b>03</b><h3>أرسل عبر WhatsApp</h3><p>أرسل طلبك مباشرة للمتجر.</p></div>
-</div></section>
+<section class="steps" aria-label="طريقة الطلب">
+  <div class="container">
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h15l-1.5 9h-11zM6 4 4.5 2H2M9 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm9 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg></div>
+        <b>01</b><h3>اختر المنتج</h3><p>أضف ما تحتاجه للسلة</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM9 7h6M9 11h6M9 15h4"/></svg></div>
+        <b>02</b><h3>راجع طلبك</h3><p>حدد الكمية وبيانات التوصيل</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 9.2c.2-.5.5-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.6 1 1.3 1.7 2.3 2.2l.6-.5c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.3.3.5v.5c0 .3-.2.6-.6.8-1 .4-2.5-.1-4.1-1.5-1.6-1.3-2.5-2.9-2.7-4.1Z"/></svg></div>
+        <b>03</b><h3>أرسل عبر WhatsApp</h3><p>أرسل طلبك مباشرة للمتجر</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer><div class="container footer-grid"><div><strong>حنبولة<span>•</span></strong><p>متجر الأدوات والمستلزمات الطبية.</p></div><div><h4>المتجر</h4><a href="products.html">كل المنتجات</a><a href="cart.html">السلة</a></div><div><h4>الطلب</h4><p>يتم تأكيد الطلب عبر WhatsApp.</p></div></div><div class="copyright">© 2026 حنبولة</div></footer>
 <script src="data/store-data.js"></script><script src="js/app.js"></script><script src="js/slider.js"></script>
