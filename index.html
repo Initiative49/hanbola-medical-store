@@ -8,12 +8,15 @@
 <body>
 <header class="site-header">
   <div class="container header-row">
-    <button class="menu-btn" id="mobileMenuBtn">☰</button>
-    <a class="brand" href="index.html"><strong>حنبولة</strong><i>•</i><small>مستلزمات طبية بكل سهولة</small></a>
-    <a class="cart" href="cart.html">🛒 <b id="cartCount">0</b></a>
+    <button class="menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">☰</button>
+    <a class="brand" href="index.html" aria-label="حنبولة">
+      <strong>حنبولة</strong><i>•</i>
+      <small>متجر المستلزمات الطبية</small>
+      <span class="brand-logo"><b>✚</b> حنبولة الطبي</span>
+    </a>
+    <a class="cart" href="cart.html" aria-label="السلة">🛒 <b id="cartCount">0</b></a>
   </div>
-  <div class="container search-wrap"><div class="search"><input id="homeSearch" placeholder="ابحث عن منتج أو قسم..."><button onclick="goSearch()">⌕</button></div></div>
-  <nav id="mainNav"><div class="container nav-inner"><a class="active" href="index.html">الرئيسية</a><a href="products.html">كل المنتجات</a></div></nav>
+  <nav id="mainNav"><div class="container nav-inner"><a class="active" href="index.html">الرئيسية</a><a href="products.html">كل المنتجات</a><a href="#categories">الأقسام</a></div></nav>
 </header>
 
 <section class="hero">
@@ -21,7 +24,14 @@
   <div class="hero-copy"><span>متجر حنبولة الطبي</span><h1>مستلزماتك الطبية<br><em>بكل سهولة</em></h1>
   <p>مجموعة مختارة من السماعات الطبية وأجهزة الضغط والإكسسوارات الطبية.</p>
   <a class="btn" href="products.html">تصفح المنتجات <b>←</b></a></div>
-  <div class="hero-visual"><div class="hero-circle">🩺</div><label>جودة واختيار طبي</label></div>
+  <div class="hero-visual">
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active"><img src="images/001.jpg" alt="منتجات حنبولة"></div>
+      <div class="slide"><img src="images/002.jpg" alt="منتجات حنبولة"></div>
+      <div class="slide"><img src="images/003.jpg" alt="منتجات حنبولة"></div>
+    </div>
+    <div class="slider-arrows"><button id="prevSlide" aria-label="الصورة السابقة">‹</button><button id="nextSlide" aria-label="الصورة التالية">›</button></div>
+  </div>
  </div>
  <div class="dots"><i class="on"></i><i></i><i></i></div>
 </section>
@@ -43,5 +53,5 @@
 </div></section>
 
 <footer><div class="container footer-grid"><div><strong>حنبولة<span>•</span></strong><p>متجر الأدوات والمستلزمات الطبية.</p></div><div><h4>المتجر</h4><a href="products.html">كل المنتجات</a><a href="cart.html">السلة</a></div><div><h4>الطلب</h4><p>يتم تأكيد الطلب عبر WhatsApp.</p></div></div><div class="copyright">© 2026 حنبولة</div></footer>
-<script src="data/store-data.js"></script><script src="js/app.js"></script>
+<script src="data/store-data.js"></script><script src="js/app.js"></script><script src="js/slider.js"></script>
 </body></html>

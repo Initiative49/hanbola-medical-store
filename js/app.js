@@ -1,5 +1,6 @@
 function imagePath(n){return STORE.imageFolder+String(n).padStart(STORE.imageDigits,"0")+".jpg"}
-function money(v){return Number(v).toLocaleString("ar-YE")+" "+STORE.currency}
+function money(v){return STORE.currencySymbol+Number(v).toFixed(2)}
+function moneyYER(v){return Number(v*STORE.exchangeRate).toLocaleString("en-US")+" ر.ي"}
 function getCategory(id){return categories.find(c=>c.id===id)}
 function getCart(){try{return JSON.parse(localStorage.getItem("hanbola_cart")||"[]")}catch(e){return[]}}
 function saveCart(c){localStorage.setItem("hanbola_cart",JSON.stringify(c));updateCartCount()}
