@@ -1,8 +1,8 @@
-const STORE={name:"حنبولة",whatsapp:"967700000000",currency:"USD",currencySymbol:"$",secondaryCurrency:"YER",exchangeRate:1580,imageFolder:"images/",imageDigits:3};
+const STORE={name:"حنبولة",whatsapp:"+966570524721",currency:"USD",currencySymbol:"$",secondaryCurrency:"YER",exchangeRate:1580,imageFolder:"images/",imageDigits:3};
 const categories=[
-{id:"stethoscopes",name:"السماعات الطبية",icon:"🩺"},
-{id:"bp-monitors",name:"أجهزة الضغط الطبية",icon:"🩺‍🩸"},
-{id:"accessories",name:"الإكسسوارات الطبية",icon:"🧤"}];
+{id:"stethoscopes",name:"السماعات الطبية",image:"cat-001.jpg"},
+{id:"bp-monitors",name:"أجهزة الضغط الطبية",image:"cat-002.jpg"},
+{id:"accessories",name:"الإكسسوارات الطبية",image:"cat-003.jpg"}];
 const products=[
 {id:1,name:"سماعة طبية احترافية",category:"stethoscopes",price:9.50,image:1,featured:true,description:"سماعة طبية مناسبة للاستخدام اليومي والعيادات."},
 {id:2,name:"سماعة طبية كلاسيكية",category:"stethoscopes",price:6.50,image:2,featured:true,description:"تصميم عملي وخفيف للاستخدام الطبي."},

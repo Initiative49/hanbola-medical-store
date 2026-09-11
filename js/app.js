@@ -1,4 +1,5 @@
 function imagePath(n){return STORE.imageFolder+String(n).padStart(STORE.imageDigits,"0")+".jpg"}
+function categoryImagePath(name){return STORE.imageFolder+name}
 function money(v){return STORE.currencySymbol+Number(v).toFixed(2)}
 function moneyYER(v){return Number(v*STORE.exchangeRate).toLocaleString("en-US")+" ر.ي"}
 function getCategory(id){return categories.find(c=>c.id===id)}
@@ -13,38 +14,43 @@ document.addEventListener("DOMContentLoaded",()=>{updateCartCount();let nav=docu
   const open=nav.classList.toggle("open");
   mb.setAttribute("aria-expanded",open?"true":"false");
 });
-let cg=document.getElementById("categoryGrid");if(cg)cg.innerHTML=categories.map(c=>`<a class="category-card" href="products.html?category=${c.id}"><div class="cat-icon">${c.icon}</div><h3>${c.name}</h3><span>تصفح القسم ←</span></a>`).join("");
+let cg=document.getElementById("categoryGrid");
+if(cg)cg.innerHTML=categories.map(c=>`<a class="category-card" href="products.html?category=${c.id}">
+<div class="cat-image"><img src="${categoryImagePath(c.image)}" alt="${c.name}" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')"></div>
+<h3>${c.name}</h3><span>تصفح القسم ←</span></a>`).join("");
 let fg=document.getElementById("featuredGrid");if(fg)fg.innerHTML=products.filter(p=>p.featured).slice(0,4).map(card).join("");
 let s=document.getElementById("homeSearch");if(s)s.addEventListener("keydown",e=>{if(e.key==="Enter")goSearch()})});
-/* ===== v5.3 universal mobile menu ===== */
+
+/* ===== Universal menu: v5.4 ===== */
 document.addEventListener("DOMContentLoaded",()=>{
   const btn=document.getElementById("mobileMenuBtn");
   const nav=document.getElementById("mainNav");
   if(!btn||!nav)return;
-  btn.setAttribute("aria-expanded","false");
-  nav.setAttribute("aria-hidden","true");
-  btn.addEventListener("click",(e)=>{
+
+  const closeMenu=()=>{
+    nav.classList.remove("open");
+    btn.classList.remove("is-open");
+    btn.setAttribute("aria-expanded","false");
+    nav.setAttribute("aria-hidden","true");
+  };
+  const openMenu=()=>{
+    nav.classList.add("open");
+    btn.classList.add("is-open");
+    btn.setAttribute("aria-expanded","true");
+    nav.setAttribute("aria-hidden","false");
+  };
+
+  btn.onclick=(e)=>{
     e.preventDefault();
     e.stopPropagation();
-    const open=nav.classList.toggle("open");
-    btn.classList.toggle("is-open",open);
-    btn.setAttribute("aria-expanded",String(open));
-    nav.setAttribute("aria-hidden",String(!open));
-  });
+    nav.classList.contains("open") ? closeMenu() : openMenu();
+  };
+
   nav.querySelectorAll("a").forEach(link=>{
-    link.addEventListener("click",()=>{
-      nav.classList.remove("open");
-      btn.classList.remove("is-open");
-      btn.setAttribute("aria-expanded","false");
-      nav.setAttribute("aria-hidden","true");
-    });
+    link.onclick=()=>closeMenu();
   });
+
   document.addEventListener("click",(e)=>{
-    if(!nav.contains(e.target)&&!btn.contains(e.target)){
-      nav.classList.remove("open");
-      btn.classList.remove("is-open");
-      btn.setAttribute("aria-expanded","false");
-      nav.setAttribute("aria-hidden","true");
-    }
+    if(!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
   });
 });

@@ -398,3 +398,80 @@ body:has(#cartLayout) .site-footer{
   .brand strong{font-size:20px}
   .header-logo{width:28px;height:28px;font-size:15px}
 }
+
+/* ===== v5.4 requested updates ===== */
+
+/* Remove the green dot between store name and logo */
+.brand i{display:none!important}
+
+/* Category cards: image slots supplied externally in /images */
+.category-card{justify-content:flex-end;padding:10px}
+.cat-image{
+  width:100%;
+  height:86px;
+  border-radius:10px;
+  overflow:hidden;
+  background:#e8f3f2;
+  display:grid;
+  place-items:center;
+  margin-bottom:6px;
+}
+.cat-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.cat-image.image-missing::after{
+  content:"صورة القسم";
+  color:#809094;
+  font-size:9px;
+}
+.category-card h3{margin:2px 0}
+.category-card span{margin-top:1px}
+
+/* Social section in footer */
+.footer-social{
+  border-top:1px solid rgba(255,255,255,.10);
+  padding-top:18px;
+  margin-top:18px;
+}
+.footer-social h3{
+  color:#fff;
+  margin:0 0 12px;
+  font-size:15px;
+}
+.social-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+.social-links a{
+  min-width:105px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.11);
+  background:rgba(255,255,255,.035);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  color:#dce7e8;
+  font-size:9px;
+}
+.social-links a span{
+  width:25px;height:25px;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(11,117,110,.22);
+  color:#71cec7;
+  font-size:17px;
+}
+@media(max-width:600px){
+  .cat-image{height:78px}
+  .social-links{gap:8px}
+  .social-links a{min-width:110px}
+}
+
+/* v5.4 final: hide any legacy brand dot */
+.brand i{display:none!important}
