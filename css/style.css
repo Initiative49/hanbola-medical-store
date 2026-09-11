@@ -475,3 +475,8 @@ body:has(#cartLayout) .site-footer{
 
 /* v5.4 final: hide any legacy brand dot */
 .brand i{display:none!important}
+
+/* v5.5: logo vertically centered between store name and banner */
+.header-logo{
+  transform:translateY(4px);
+}

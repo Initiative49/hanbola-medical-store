@@ -21,36 +21,35 @@ if(cg)cg.innerHTML=categories.map(c=>`<a class="category-card" href="products.ht
 let fg=document.getElementById("featuredGrid");if(fg)fg.innerHTML=products.filter(p=>p.featured).slice(0,4).map(card).join("");
 let s=document.getElementById("homeSearch");if(s)s.addEventListener("keydown",e=>{if(e.key==="Enter")goSearch()})});
 
-/* ===== Universal menu: v5.4 ===== */
-document.addEventListener("DOMContentLoaded",()=>{
-  const btn=document.getElementById("mobileMenuBtn");
-  const nav=document.getElementById("mainNav");
-  if(!btn||!nav)return;
 
-  const closeMenu=()=>{
+/* ===== Universal menu: v5.5 ===== */
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("mobileMenuBtn");
+  const nav = document.getElementById("mainNav");
+  if (!btn || !nav) return;
+
+  function closeMenu() {
     nav.classList.remove("open");
     btn.classList.remove("is-open");
-    btn.setAttribute("aria-expanded","false");
-    nav.setAttribute("aria-hidden","true");
-  };
-  const openMenu=()=>{
-    nav.classList.add("open");
-    btn.classList.add("is-open");
-    btn.setAttribute("aria-expanded","true");
-    nav.setAttribute("aria-hidden","false");
-  };
+    btn.setAttribute("aria-expanded", "false");
+    nav.setAttribute("aria-hidden", "true");
+  }
 
-  btn.onclick=(e)=>{
+  btn.addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    nav.classList.contains("open") ? closeMenu() : openMenu();
-  };
-
-  nav.querySelectorAll("a").forEach(link=>{
-    link.onclick=()=>closeMenu();
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    btn.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    nav.setAttribute("aria-hidden", String(!open));
   });
 
-  document.addEventListener("click",(e)=>{
-    if(!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
   });
 });
