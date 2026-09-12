@@ -587,6 +587,459 @@ body:has(#cartLayout) .site-footer{
     width:100%;
     height:100%;
     object-fit:contain;
+
+  /* =========================================================
+   حنبولة | لوحة التحكم المركزية بالألوان
+   ========================================================= */
+
+:root{
+
+  /* =========================
+     01 - ألوان الموقع العامة
+     ========================= */
+  --hb-bg:#ffffff;
+  --hb-text:#34474d;
+  --hb-text-light:#6b7b80;
+  --hb-heading:#34474d;
+  --hb-border:#e5eeee;
+
+
+  /* =========================
+     02 - الهوية الرئيسية
+     ========================= */
+  --hb-primary:#34474d;
+  --hb-primary-light:#76c9c2;
+  --hb-primary-dark:#26363b;
+
+
+  /* =========================
+     03 - الهيدر
+     ========================= */
+  --hb-header-bg:#ffffff;
+  --hb-header-text:#34474d;
+  --hb-menu-color:#34474d;
+  --hb-cart-color:#34474d;
+  --hb-cart-count-bg:#2f9f96;
+  --hb-cart-count-text:#ffffff;
+
+
+  /* =========================
+     04 - البانر
+     ========================= */
+  --hb-banner-bg:#f4faf9;
+
+
+  /* =========================
+     05 - كروت الأقسام
+     ========================= */
+  --hb-category-bg:#ffffff;
+  --hb-category-name:#34474d;
+  --hb-category-border:#e5eeee;
+  --hb-category-hover:#f4faf9;
+
+
+  /* =========================
+     06 - كروت المنتجات
+     ========================= */
+  --hb-product-bg:#ffffff;
+  --hb-product-name:#34474d;
+  --hb-product-description:#6b7b80;
+  --hb-product-border:#e5eeee;
+
+
+  /* =========================
+     07 - الأسعار
+     ========================= */
+
+  /* السعر الأساسي داخل بطاقة المنتج */
+  --hb-product-price:#FC8A36;
+
+  /* سعر الدولار إذا كان له class مستقل */
+  --hb-usd-price:#FC8A36;
+
+  /* سعر الريال اليمني إذا كان له class مستقل */
+  --hb-yer-price:#FC8A36;
+
+  /* السعر القديم */
+  --hb-price-old:#FC8A36;
+
+  /* رمز / اسم العملة */
+  --hb-currency:#FC8A36;
+
+
+  /* =========================
+     08 - أسعار السلة
+     ========================= */
+
+  /* سعر المنتج داخل السلة */
+  --hb-cart-price:#FC8A36;
+
+  /* الإجمالي في السلة */
+  --hb-cart-total:#FC8A36;
+
+  /* العملة في السلة */
+  --hb-cart-currency:#FC8A36;
+
+
+  /* =========================
+     09 - الأزرار
+     ========================= */
+  --hb-button-bg:#808080;
+  --hb-button-text:#ffffff;
+
+  --hb-button-hover:#FC8A36;
+  --hb-button-hover-text:#ffffff;
+
+  --hb-button-active:#FC8A36;
+  --hb-button-active-text:#ffffff;
+
+
+  /* =========================
+     10 - الروابط
+     ========================= */
+  --hb-link:#2f9f96;
+  --hb-link-hover:#34474d;
+
+
+  /* =========================
+     11 - السلة
+     ========================= */
+  --hb-cart-bg:#ffffff;
+  --hb-cart-text:#34474d;
+  --hb-cart-border:#e5eeee;
+
+
+  /* =========================
+     12 - التنبيهات
+     ========================= */
+  --hb-success:#2f9f96;
+  --hb-error:#d9534f;
+  --hb-warning:#e0a800;
+  --hb-info:#3b82a0;
+
+
+  /* =========================
+     13 - القائمة المنسدلة
+     ========================= */
+  --hb-menu-bg:#ffffff;
+  --hb-menu-text:#34474d;
+  --hb-menu-hover:#f4faf9;
+  --hb-menu-border:#e5eeee;
+
+
+  /* =========================
+     14 - الفوتر
+     ========================= */
+  --hb-footer-bg:#34474d;
+  --hb-footer-heading:#ffffff;
+  --hb-footer-text:#dce8e7;
+  --hb-footer-link:#76c9c2;
+  --hb-footer-link-hover:#ffffff;
+
+
+  /* =========================
+     15 - الأيقونات
+     ========================= */
+  --hb-icon:#76c9c2;
+  --hb-icon-hover:#ffffff;
+
+
+  /* =========================
+     16 - خلفيات الصور
+     ========================= */
+  --hb-image-bg:#e8f3f2;
+
+
+  /* =========================
+     17 - الظلال
+     ========================= */
+  --hb-shadow:rgba(20,40,45,.10);
+  --hb-shadow-hover:rgba(20,40,45,.18);
+
+
+  /* =========================
+     18 - الحركة
+     ========================= */
+  --hb-transition:.25s;
+}
+
+
+/* =========================================================
+   تطبيق الألوان
+   ========================================================= */
+
+
+/* =========================
+   الموقع
+   ========================= */
+
+body{
+  background:var(--hb-bg);
+  color:var(--hb-text);
+}
+
+
+/* =========================
+   الهيدر
+   ========================= */
+
+.site-header{
+  background:var(--hb-header-bg);
+}
+
+.brand strong{
+  color:var(--hb-header-text);
+}
+
+.menu-btn{
+  color:var(--hb-menu-color);
+}
+
+.cart{
+  color:var(--hb-cart-color);
+}
+
+
+/* =========================
+   البانر
+   ========================= */
+
+.hero{
+  background:var(--hb-banner-bg);
+}
+
+
+/* =========================
+   كروت الأقسام
+   ========================= */
+
+.cat-image{
+  background:var(--hb-image-bg);
+}
+
+.category-card{
+  background:var(--hb-category-bg);
+  border-color:var(--hb-category-border);
+
+  transition:
+    background-color var(--hb-transition) ease,
+    border-color var(--hb-transition) ease,
+    transform var(--hb-transition) ease;
+}
+
+.category-card:hover{
+  background:var(--hb-category-hover);
+}
+
+.category-card .cat-name{
+  color:var(--hb-category-name);
+}
+
+
+/* =========================
+   كروت المنتجات
+   ========================= */
+
+.product-card{
+  background:var(--hb-product-bg);
+  border-color:var(--hb-product-border);
+
+  transition:
+    background-color var(--hb-transition) ease,
+    border-color var(--hb-transition) ease,
+    transform var(--hb-transition) ease,
+    box-shadow var(--hb-transition) ease;
+}
+
+.product-card .product-name{
+  color:var(--hb-product-name);
+}
+
+.product-card p{
+  color:var(--hb-product-description);
+}
+
+
+/* =========================================================
+   الأسعار - بطاقة المنتج
+   ========================================================= */
+
+/* السعر الفعلي الموجود داخل product-bottom */
+.product-card .product-bottom strong{
+  color:var(--hb-product-price);
+}
+
+
+/* إذا كان السعر يحمل usd-price */
+.product-card .usd-price{
+  color:var(--hb-usd-price);
+}
+
+
+/* إذا كان السعر يحمل yer-price */
+.product-card .yer-price{
+  color:var(--hb-yer-price);
+}
+
+
+/* السعر القديم */
+.product-card .old-price{
+  color:var(--hb-price-old);
+}
+
+
+/* العملة */
+.product-card .currency{
+  color:var(--hb-currency);
+}
+
+
+/* =========================================================
+   أسعار السلة
+   ========================================================= */
+
+/* السعر الموجود بجانب كل منتج في السلة */
+.cart-item .price,
+.cart-item .item-price,
+.cart-item .cart-price,
+.cart-page .price{
+  color:var(--hb-cart-price);
+}
+
+
+/* سعر الدولار في السلة إذا استخدم class مستقل */
+.cart-item .usd-price,
+.cart-page .usd-price{
+  color:var(--hb-cart-price);
+}
+
+
+/* سعر الريال في السلة إذا استخدم class مستقل */
+.cart-item .yer-price,
+.cart-page .yer-price{
+  color:var(--hb-cart-currency);
+}
+
+
+/* الإجمالي النهائي */
+.cart-total,
+.cart-total strong,
+.total-price,
+.total-price strong{
+  color:var(--hb-cart-total);
+}
+
+
+/* =========================================================
+   الأزرار
+   ========================================================= */
+
+.product-card .btn,
+.product-card button,
+.category-card .btn,
+.category-card button{
+
+  background:var(--hb-button-bg);
+  color:var(--hb-button-text);
+
+  transition:
+    background-color var(--hb-transition) ease,
+    color var(--hb-transition) ease,
+    transform var(--hb-transition) ease,
+    box-shadow var(--hb-transition) ease;
+}
+
+
+/* عند المرور */
+.product-card .btn:hover,
+.product-card button:hover,
+.category-card .btn:hover,
+.category-card button:hover{
+
+  background:var(--hb-button-hover);
+  color:var(--hb-button-hover-text);
+}
+
+
+/* عند الضغط */
+.product-card .btn:active,
+.product-card button:active,
+.category-card .btn:active,
+.category-card button:active{
+
+  background:var(--hb-button-active);
+  color:var(--hb-button-active-text);
+
+  transform:scale(.96);
+}
+
+
+/* =========================================================
+   الروابط
+   ========================================================= */
+
+a{
+  transition:color var(--hb-transition) ease;
+}
+
+a:hover{
+  color:var(--hb-link-hover);
+}
+
+
+/* =========================================================
+   القائمة
+   ========================================================= */
+
+#mainNav{
+  background:var(--hb-menu-bg);
+}
+
+#mainNav a{
+  color:var(--hb-menu-text);
+}
+
+#mainNav a:hover{
+  background:var(--hb-menu-hover);
+  color:var(--hb-link);
+}
+
+
+/* =========================================================
+   الفوتر
+   ========================================================= */
+
+.site-footer{
+  background:var(--hb-footer-bg);
+  color:var(--hb-footer-text);
+}
+
+.site-footer h3,
+.site-footer h4{
+  color:var(--hb-footer-heading);
+}
+
+.site-footer a{
+  color:var(--hb-footer-link);
+}
+
+.site-footer a:hover{
+  color:var(--hb-footer-link-hover);
+}
+
+
+/* =========================================================
+   الصور
+   ========================================================= */
+
+.product-image{
+  background:var(--hb-image-bg);
+}
+
+
+/* =========================================================
+   نهاية لوحة الألوان
+   ========================================================= */
     display:block;
     position:absolute;
     inset:0;
