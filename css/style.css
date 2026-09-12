@@ -948,3 +948,56 @@ a:hover{
 /* =========================================================
    نهاية لوحة الألوان
    ========================================================= */
+
+/* =====================================================
+   حنبولة | أيقونة السلة
+   ===================================================== */
+
+.cart{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+.cart-icon{
+  width:27px;
+  height:27px;
+  fill:none;
+  stroke:var(--hb-cart-color, #34474d);
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:
+    transform .2s ease,
+    stroke .2s ease;
+}
+
+/* عند لمس/الضغط على السلة */
+.cart:active .cart-icon{
+  transform:scale(.88);
+}
+
+/* عداد السلة */
+#cartCount{
+  position:absolute;
+  top:-7px;
+  right:-8px;
+  min-width:17px;
+  height:17px;
+  padding:0 4px;
+  border-radius:50%;
+  background:var(--hb-cart-count-bg, #FC8A36);
+  color:var(--hb-cart-count-text, #ffffff);
+  font-size:10px;
+  line-height:17px;
+  text-align:center;
+  font-weight:800;
+}
+
+/* لون رقم عداد السلة */
+#cartCount{
+  background:#FC8A36;
+  color:#ffffff;
+}
