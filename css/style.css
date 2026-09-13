@@ -1002,3 +1002,40 @@ a:hover{
   color:#ffffff;
 }
 
+.header-row{
+  direction:rtl;
+  position:relative;
+}
+
+.menu-btn{
+  position:absolute;
+  top:50%;
+  right:15px;
+  transform:translateY(-50%);
+  width:42px;
+  height:42px;
+  border:0;
+  background:transparent;
+  padding:7px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  z-index:200;
+}
+
+.cart{
+  position:absolute;
+  top:50%;
+  left:15px;
+  transform:translateY(-50%);
+  z-index:200;
+}
+
+.brand{
+  position:absolute;
+  left:50%;
+  top:4px;
+  transform:translateX(-50%);
+}
