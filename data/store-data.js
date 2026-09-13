@@ -4,7 +4,7 @@ const categories=[
 {id:"bp-monitors",name:"أجهزة الضغط الطبية",image:"cat-002.jpg"},
 {id:"accessories",name:"الإكسسوارات الطبية",image:"cat-003.jpg"}];
 const products=[
-{id:1,name:"MDF 747 - Dual Head Stethoscope",category:"stethoscopes",price:22,image:1,featured:true,bestSeller:true,description:""},
+{id:1,name:"MDF 747 - Dual Head Stethoscope",category:"stethoscopes",price:21.84,image:1,featured:true,bestSeller:true,description:"سماعة MDF®️ Dual Head هي أداة تشخيصية خفيفة الوزن، توفر صوتيات حساسة وأداءً احترافيًا بسعر مناسب. ويضمن تصميمها المريح راحة الطبيب والمريض، حتى عند استخدامها لفترات طويلة. كما أنها مصنوعة يدويًا بدقة، مما يجعلها خيارًا موثوقًا لدى المتخصصين في الرعاية الصحية. قطعة صدرية ثنائية الرأس مصنوعة من الألمنيوم خفيف الوزن وعالي المتانة، ومصنّعة بدقة ومصقولة يدويًا للحصول على أعلى مستوى من الأداء والمتانة. ساق صمام صوتي دوّارة بالكامل مزودة بنقطة مؤشر خضراء، تساعد المستخدم على تحديد قناة الصوت النشطة بسهولة. مزودة بغشاء ليفي فائق الرقة مصمم لاكتشاف الأصوات ذات الترددات العالية. أما الجرس (Bell)، والمزوّد بحلقة غير باردة لراحة المريض، فيوفر تضخيمًا أفضل للصوت، وعزلًا للترددات المنخفضة، مع الحفاظ على راحة المريض أثناء الفحص."},
 {id:2,name:"سماعات MDF التخصصية",category:"stethoscopes",price:47.50,image:2,featured:true,description:"سماعات الCardiology الفخمة تفيد للدراسات التخصصية."},
 {id:3,name:"جهاز ضغط MDF",category:"bp-monitors",price:34.85,image:3,featured:true,description:"من أفضل أجهزة الضغط ذات الكفاءة العالية والصلابة."},
 {id:4,name:"أجهزة ضغط Exanovo ",category:"bp-monitors",price:17,image:4,featured:false,bestSeller:true,description:"أجهزة ضغط عملية سلسة ذو منفذ واحد."},
