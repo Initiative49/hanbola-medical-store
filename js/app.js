@@ -19,6 +19,8 @@ if(cg)cg.innerHTML=categories.map(c=>`<a class="category-card" href="products.ht
 <div class="cat-image"><img src="${categoryImagePath(c.image)}" alt="${c.name}" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')"></div>
 <h3>${c.name}</h3><span>تصفح القسم ←</span></a>`).join("");
 let fg=document.getElementById("featuredGrid");if(fg)fg.innerHTML=products.filter(p=>p.featured).slice(0,4).map(card).join("");
+let bs=document.getElementById("bestSellerGrid");
+if(bs)bs.innerHTML=products.filter(p=>p.bestSeller).slice(0,4).map(card).join("");
 let s=document.getElementById("homeSearch");if(s)s.addEventListener("keydown",e=>{if(e.key==="Enter")goSearch()})});
 
 
