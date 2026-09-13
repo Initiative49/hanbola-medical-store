@@ -1043,3 +1043,12 @@ a:hover{
 #mainNav.open .nav-inner{
   top:30px;
 }
+
+.menu-btn{
+  width:48px;
+  height:48px;
+}
+
+.menu-btn span{
+  width:32px;
+}
