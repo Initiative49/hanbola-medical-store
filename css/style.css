@@ -1039,3 +1039,7 @@ a:hover{
   top:4px;
   transform:translateX(-50%);
 }
+
+#mainNav.open .nav-inner{
+  top:50px;
+}
