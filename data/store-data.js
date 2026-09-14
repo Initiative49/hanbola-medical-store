@@ -12,4 +12,9 @@ const products=[
 {id:6,name:"أجهزة Pulse Oximeter",category:"accessories",price:9.50,image:6,featured:false,description:"لقياس تشبع الاوكسجين في الدم ونبضات القلب ذو جودة عالية."},
 {id:8,name:"سماعات Nimo",category:"stethoscopes",price:16.46,image:8,featured:false,description:""},
 {id:9,name:"جهاز ضغط McKESSON",category:"bp-monitors",price:14.56,image:9,featured:false,bestSeller:false,description:""},
+{id:10,name:"مجموعة الخياطة التعليمية",category:"accessories",price:20.50,image:10,featured:false,description:""},
+{id:11,name:"التورش الطبي",category:"accessories",price:2.54,image:11,featured:false,description:""},
+{id:12,name:"مطرقة فحص الأعصاب",category:"accessories",price:5.7,image:12,featured:false,description:""},
+{id:13,name:"سماعات KDM الألمانية",category:"stethoscopes",price:8.23,image:13,featured:false,description:""},
+{id:14,name:"سماعات Littman Class ııı",category:"stethoscopes",price:19,image:14,featured:false,description:""},
 {id:7,name:"MDF MD One®️ Stainless Steel Dual Head",category:"stethoscopes",price:25,image:7,featured:false,bestSeller:true,description:"هي سماعة عالية الجودة، متينة وكلاسيكية، يعتمد عليها الممرضون والأطباء والممارسون الصحيون والمسعفون والطلاب وغيرهم منذ سنوات. تتميز قطعة الصدر ذات الجرس الحقيقي والغشاء الحقيقي بقدرتها على التقاط مجموعة واسعة من الأصوات ذات الترددات المنخفضة والعالية. وهي مصنوعة من الفولاذ المقاوم للصدأ عالي الجودة، مع أنابيب طويلة وكثيفة تساعد على حجب الضوضاء المحيطة، وأطراف أذن ناعمة من السيليكون تعمل على إحكام عزل الصوت، بالإضافة إلى قطعة صدر مصقولة بلمسة نهائية عالية الجودة أشبه بتشطيب المجوهرات. قد تبدو سماعة MD One®️ مشابهة لغيرها من السماعات، لكن حرصنا على جودة المواد والاهتمام بأدق التفاصيل هو ما يجعلها مختلفة ومميزة."}];
